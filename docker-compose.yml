@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  web:
+    build: .
+    command: npm run start
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+  #   depends_on:
+  #     - mongodb
+  #   environment:
+  #     DATABASE_URL: mongodb://todoapp@postgres/todos
+  # mongodb:
+  #   image: 'bitnami/mongodb:latest'
+  #   ports:
+  #     - "27017:27017"
+  #   volumes:
+  #     - /path/to/mongodb-persistence:/bitnami

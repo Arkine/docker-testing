@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
     return res.send('Gotcha!');
 });
 
-const server = app.listen(3000, () => {
+const server = app.listen(process.env.PORT, () => {
     console.log(`app listening on port ${server.address().port}`)
 });
 
